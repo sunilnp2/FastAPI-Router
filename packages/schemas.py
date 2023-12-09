@@ -28,6 +28,10 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
     password : str 
 
+class UserUpdate(UserBase):
+    email : str
+    password : str 
+
 
 class UserLogin(UserBase):
     password : str 
