@@ -20,3 +20,20 @@ class Blog(BlogBase):
     class Config:
         orm_mode = True
 
+# pydantic model for User 
+
+class UserBase(BaseModel):
+    email : str
+
+class UserCreate(UserBase):
+    password : str 
+
+
+class UserLogin(UserBase):
+    password : str 
+
+class User(UserBase):
+    id: int
+    password : str
+    is_active : bool
+
